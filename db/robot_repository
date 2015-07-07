@@ -8,12 +8,4 @@ robots:
   birthdate: 02/13/1990
   date hired: 07/01/2015
   department: Culinary Arts
-- id: 2
-  name: Lotus
-  city: Denver
-  state: CO
-  avatar: 
-  birthdate: 02/13/1990
-  date hired: 07/01/2015
-  department: Culinary Arts
 total: 2
