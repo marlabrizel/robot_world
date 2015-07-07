@@ -1,5 +1,9 @@
-.dashboard {
-  background-image: url(/images/dashboard_robot.png);
+body {
+  font-family: sans-serif;
+}
+
+#dashboard {
+  background-image: url(/images/dashboard_robot#png);
   position: absolute;
   background-repeat: no-repeat;
   top:0;
@@ -7,11 +11,10 @@
   right:0;
   left:0;
   overflow:hidden;
-  font-family: sans-serif;
   text-align: center;
 }
 
-.dashboard ul {
+#dashboard ul {
   width: 500px;
   padding: 15px;
   margin: 0px auto 0px auto;
@@ -19,11 +22,11 @@
   text-align: center;
 }
 
-.dashboard li {
+#dashboard li {
   display: inline;
   margin: 0px 25px;
 }
 
-.dashboard a {
+#dashboard a {
   text-decoration: none;
 }
