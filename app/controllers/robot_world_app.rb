@@ -11,4 +11,18 @@ class RobotWorldApp < Sinatra::Base
     @robots = RobotRepository.all
     erb :index
   end
+
+  get '/robots/new' do
+    erb :new
+  end
+
+  post '/robots' do
+    RobotRepository.create(params[:robot])
+    redirect '/robots'
+  end
+
+  get '/robots/:id' do |id|
+    @robot = RobotRepository.find(id.to_i)
+    erb :show
+  end
 end

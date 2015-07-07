@@ -8,7 +8,7 @@ class Robot
               :date_hired,
               :department
 
-  def intialize(data)
+  def initialize(data)
     @id         = data["id"]
     @name       = data["name"]
     @city       = data["city"]
