@@ -1,9 +1,10 @@
 body {
   font-family: sans-serif;
+  background-color: plum;
 }
 
 #dashboard {
-  background-image: url(/images/dashboard_robot#png);
+  background-image: url(/images/dashboard_robot.png);
   position: absolute;
   background-repeat: no-repeat;
   top:0;
