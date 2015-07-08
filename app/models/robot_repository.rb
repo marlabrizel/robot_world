@@ -1,4 +1,5 @@
 require 'yaml/store'
+require 'date'
 require_relative 'robot'
 
 class RobotRepository
@@ -57,5 +58,10 @@ class RobotRepository
     database.transaction do
       database['robots'].delete_if { |robot| robot["id"] == id }
     end
+  end
+
+  def self.average_age
+    ages = all.map { |robot| (Date.today - Date.parse(robot.birthdate)).to_i }
+    (ages.inject(:+)/all.count)/365
   end
 end
