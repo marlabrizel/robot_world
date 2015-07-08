@@ -31,7 +31,7 @@ class RobotRepository
                               "state" => robot[:state],
                               "avatar" => robot[:avatar],
                               "birthdate" => robot[:birthdate],
-                              "date hired" => robot[:date_hired],
+                              "date_hired" => robot[:date_hired],
                               "department" => robot[:department] }
     end
   end
@@ -49,6 +49,7 @@ class RobotRepository
       target["avatar"] = robot[:avatar]
       target["birthdate"] = robot[:birthdate]
       target["date_hired"] = robot[:date_hired]
+      target["department"] = robot[:department]
     end
   end
 
