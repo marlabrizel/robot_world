@@ -5,32 +5,53 @@ robots:
   city: Denver
   state: CO
   avatar: 
-  birthdate: 02/13/1990
+  birthdate: '1987-06-05'
   date hired: 07/01/2015
   department: Culinary Arts
-  date_hired: 07/01/2015
+  date_hired: '2015-07-01'
 - id: 3
   name: Justin
   city: Denver
   state: CO
   avatar: 
-  birthdate: 12/07/1986
+  birthdate: '1986-12-20'
   date hired: 5/15/2015
   department: IT
+  date_hired: '2015-03-08'
 - id: 4
   name: Lovisa
   city: Boulder
   state: CO
   avatar: 
-  birthdate: 04/22/1990
+  birthdate: '1990-02-13'
   date hired: 03/21/2015
   department: Management
+  date_hired: '2015-05-18'
 - id: 5
   name: Jay
   city: Denver
   state: CO
   avatar: 
-  birthdate: 08/20/1985
+  birthdate: '1985-08-20'
   date hired: 06/22/2009
   department: Technology
-total: 5
+  date_hired: '2008-03-04'
+- id: 6
+  name: Sally
+  city: Legoland
+  state: FL
+  avatar: 
+  birthdate: '1984-04-05'
+  date hired: 07/07/2015
+  department: Marketing
+  date_hired: '2015-03-20'
+- id: 7
+  name: Buzzard
+  city: Vail
+  state: CO
+  avatar: 
+  birthdate: '1987-06-05'
+  date hired: 05/18/2015
+  department: Sanitation
+  date_hired: '2015-05-18'
+total: 7
