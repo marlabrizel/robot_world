@@ -1,5 +1,3 @@
-require 'models/robot_repository'
-
 class RobotWorldApp < Sinatra::Base
   set :root, File.join(File.dirname(__FILE__), '..')
   set :method_override, true
