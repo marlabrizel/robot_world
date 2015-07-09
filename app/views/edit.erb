@@ -1,11 +1,11 @@
 <form action="/robots/<%= @robot.id %>" method="post">
   <p>Edit the Robot</p>
   <input type="hidden" name="_method" value="PUT" />
-  <input type='text' name='robot[name]' value="<%= @robot.name %>"/><br>
-  <input type='text' name='robot[city]' value="<%= @robot.city %>"/><br>
-  <input type='text' name='robot[state]' value="<%= @robot.state %>"/><br>
-  <input type='date' name='robot[birthdate]' value="<%= @robot.birthdate %>"/><br>
-  <input type='date' name='robot[date_hired]' value="<%= @robot.date_hired %>"/><br>
-  <input type='text' name='robot[department]' value="<%= @robot.department %>"/><br>
+  <input id="name" type='text' name='robot[name]' value="<%= @robot.name %>"/><br>
+  <input id="city" type='text' name='robot[city]' value="<%= @robot.city %>"/><br>
+  <input id="state" type='text' name='robot[state]' value="<%= @robot.state %>"/><br>
+  <input id="birthdate" type='date' name='robot[birthdate]' value="<%= @robot.birthdate %>"/><br>
+  <input id="date_hired" type='date' name='robot[date_hired]' value="<%= @robot.date_hired %>"/><br>
+  <input id="department" type='text' name='robot[department]' value="<%= @robot.department %>"/><br>
   <input type='submit' value="Update"/>
 </form>
