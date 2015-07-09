@@ -60,6 +60,21 @@ class RobotRepository
     end
   end
 
+  def self.delete_all
+    database.transaction do
+      database['robots'] = []
+      database['total'] = 0
+    end
+  end
+
+  def self.database
+    if ENV["ROBOT_WORLD_ENV"] == 'test'
+      @database ||= YAML::Store.new("db/robot_repository_test")
+    else
+      @database ||= YAML::Store.new("db/robot_repository")
+    end
+  end
+
   def self.average_age
     ages = all.map { |robot| (Date.today - Date.parse(robot.birthdate)).to_i }
     (ages.inject(:+)/all.count)/365
