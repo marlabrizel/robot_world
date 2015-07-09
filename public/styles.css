@@ -39,3 +39,16 @@ body {
   border: 2px solid pink;
   box-sizing: border-box;
 }
+
+#show h1 {
+  text-align: center;
+}
+
+#show img{
+  float: left;
+}
+
+#show p {
+  text-align: center;
+  font-size: 18px;
+}
