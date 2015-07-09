@@ -2,12 +2,12 @@ require_relative '../test_helper'
 
 class UserCanDeleteARobotTest < FeatureTest
   def create_robots
-    RobotRepository.create({   :name       => "Riley",
-                               :city       => "Denver",
-                               :state      => "CO",
-                               :birthdate  => "2005-02-01",
-                               :date_hired => "2005-09-17",
-                               :department => "Hospitality" })
+    RobotRepository.create({ :name       => "Riley",
+                             :city       => "Denver",
+                             :state      => "CO",
+                             :birthdate  => "2005-02-01",
+                             :date_hired => "2005-09-17",
+                             :department => "Hospitality" })
   end
 
   def test_user_can_delete_a_robot
