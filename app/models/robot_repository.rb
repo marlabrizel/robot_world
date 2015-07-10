@@ -1,10 +1,13 @@
-require 'yaml/store'
 require 'date'
 require_relative 'robot'
 
 class RobotRepository
   def self.database
-    @database ||= YAML::Store.new("db/robot_repository")
+    if ENV["ROBOT_WORLD_ENV"] == 'test'
+      @database ||= Sequel.sqlite('db/robot_repository_test.sqlite3')
+    else
+      @database ||= Sequel.sqlite('db/robot_repository.sqlite3')
+    end
   end
 
   def self.raw_robots
@@ -64,14 +67,6 @@ class RobotRepository
     database.transaction do
       database['robots'] = []
       database['total'] = 0
-    end
-  end
-
-  def self.database
-    if ENV["ROBOT_WORLD_ENV"] == 'test'
-      @database ||= YAML::Store.new("db/robot_repository_test")
-    else
-      @database ||= YAML::Store.new("db/robot_repository")
     end
   end
 
