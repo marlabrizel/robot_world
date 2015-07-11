@@ -17,7 +17,7 @@ class RobotRepository
   end
 
   def self.all
-    database.from(:robots).to_a.map { |data| Robot.new(data)}
+    dataset.to_a.map { |data| Robot.new(data)}
   end
 
   def self.raw_robot(id)
@@ -25,7 +25,7 @@ class RobotRepository
   end
 
   def self.create(robot)
-    database.from(:robots).insert(name: robot[:name],
+    dataset.insert(name: robot[:name],
                                   city: robot[:city],
                                   state: robot[:state],
                                   avatar: robot[:avatar],
@@ -58,7 +58,11 @@ class RobotRepository
   end
 
   def self.delete_all
-    database.from(:robots).delete
+    dataset.delete
+  end
+
+  def self.dataset
+    database.from(:robots)
   end
 
   def self.average_age
