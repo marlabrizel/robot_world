@@ -64,10 +64,7 @@ class RobotRepository
   end
 
   def self.delete_all
-    database.transaction do
-      database['robots'] = []
-      database['total'] = 0
-    end
+    database.from(:robots).delete
   end
 
   def self.average_age
