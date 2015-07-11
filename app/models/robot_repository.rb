@@ -17,7 +17,7 @@ class RobotRepository
   end
 
   def self.all
-    raw_robots.map { |data| Robot.new(data) }
+    database.from(:robots).to_a.map { |data| Robot.new(data)}
   end
 
   def self.raw_robot(id)
@@ -25,19 +25,13 @@ class RobotRepository
   end
 
   def self.create(robot)
-    database.transaction do
-      database['robots'] ||= []
-      database['total'] ||= 0
-      database['total'] += 1
-      database['robots'] << { "id" => database['total'],
-                              "name" => robot[:name],
-                              "city" => robot[:city],
-                              "state" => robot[:state],
-                              "avatar" => robot[:avatar],
-                              "birthdate" => robot[:birthdate],
-                              "date_hired" => robot[:date_hired],
-                              "department" => robot[:department] }
-    end
+    database.from(:robots).insert(name: robot[:name],
+                                  city: robot[:city],
+                                  state: robot[:state],
+                                  avatar: robot[:avatar],
+                                  birthdate: robot[:birthdate],
+                                  date_hired: robot[:date_hired],
+                                  department: robot[:department])
   end
 
   def self.find(id)
